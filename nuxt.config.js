@@ -12,6 +12,7 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', type: 'text/css', href: 'styles/bootstrap.min.css' },
+      { rel: 'stylesheet', type: 'text/css', href: 'styles/font-awesome.min.css' },
     ]
   },
   /*
