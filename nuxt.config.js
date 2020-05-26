@@ -2,6 +2,9 @@ module.exports = {
   /*
   ** Headers of the page
   */
+  env: {
+    strapiBaseUri: process.env.API_URL || "http://localhost:1337"
+  },
   head: {
     title: 'nuxtjs-starter-pack',
     meta: [
@@ -15,6 +18,27 @@ module.exports = {
       { rel: 'stylesheet', type: 'text/css', href: 'styles/font-awesome.min.css' },
     ],
   },
+  modules: [
+    '@nuxtjs/apollo',
+    '@nuxtjs/markdownit'
+  ],
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: process.env.BACKEND_URL || "http://localhost:1337/graphql"
+      }
+    }
+  },
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    injected: true
+  },
+  plugins: [
+    '~plugins/global',
+    '~plugins/file'
+  ],
   /*
   ** Customize the progress bar color
   */

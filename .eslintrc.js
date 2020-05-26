@@ -12,7 +12,6 @@ module.exports = {
     // consider switching to `plugin:vue/strongly-recommended` or
     // `plugin:vue/recommended` for stricter rules.
     'plugin:vue/recommended',
-    'airbnb',
   ],
   // required to lint *.vue files
   plugins: [

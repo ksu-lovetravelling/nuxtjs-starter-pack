@@ -23,6 +23,10 @@
     "semi": [
       "error",
       "always"
+    ],
+    "import/no-unresolved": [
+      2,
+      { "caseSensitive": true }
     ]
   }
 }

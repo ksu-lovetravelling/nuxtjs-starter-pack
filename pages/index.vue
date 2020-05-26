@@ -10,6 +10,35 @@
       <h2 class="subtitle">
         Nuxt.js project
       </h2>
+
+      <app-button>My new button</app-button>
+
+      {{ homePage }}
+
+      <div v-html="$md.render(markdownText)" />
+
+      <img :src="$file.getFileUrl(homePage.background.url)">
     </div>
   </section>
 </template>
+
+<script>
+import homepageQuery from "@/apollo/queries/home-page/homepage.gql";
+
+export default {
+  data() {
+    return {
+      homePage: {
+
+      },
+      markdownText: '# Hello world'
+    }
+  },
+  apollo: {
+    homePage: {
+      prefetch: true,
+      query: homepageQuery,
+    }
+  }
+};
+</script>
