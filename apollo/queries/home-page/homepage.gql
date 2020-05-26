@@ -3,7 +3,7 @@ query HomePage {
         title,
         description,
         background {
-            url
+            url,
         },
     }
 }
