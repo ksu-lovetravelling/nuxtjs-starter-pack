@@ -12,16 +12,32 @@
       </h2>
 
       <app-button>My new button</app-button>
+
+      {{ homePage }}
     </div>
   </section>
 </template>
 
 <script>
 import AppButton from '~/components/global/AppButton';
+import homepageQuery from "@/apollo/queries/home-page/homepage.gql";
 
 export default {
   components: {
     AppButton,
   },
+  data() {
+    return {
+      homePage: {
+
+      }
+    }
+  },
+  apollo: {
+    homePage: {
+      prefetch: true,
+      query: homepageQuery,
+    }
+  }
 };
 </script>
