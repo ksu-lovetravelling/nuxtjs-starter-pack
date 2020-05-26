@@ -14,6 +14,8 @@
       <app-button>My new button</app-button>
 
       {{ homePage }}
+
+      <div v-html="$md.render(markdownText)" />
     </div>
   </section>
 </template>
@@ -30,7 +32,8 @@ export default {
     return {
       homePage: {
 
-      }
+      },
+      markdownText: '# Hello world'
     }
   },
   apollo: {

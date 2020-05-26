@@ -15,7 +15,8 @@
   "dependencies": {
     "nuxt": "^2.0.0",
     "@nuxtjs/apollo": "^4.0.1-rc.1",
-    "graphql": "^15.0.0"
+    "graphql": "^15.0.0",
+    "@nuxtjs/markdownit": "^1.2.9"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

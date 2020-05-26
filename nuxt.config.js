@@ -20,6 +20,7 @@ module.exports = {
   },
   modules: [
     '@nuxtjs/apollo',
+    '@nuxtjs/markdownit'
   ],
   apollo: {
     clientConfigs: {
@@ -27,6 +28,12 @@ module.exports = {
         httpEndpoint: process.env.BACKEND_URL || "http://localhost:1337/graphql"
       }
     }
+  },
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    injected: true
   },
   /*
   ** Customize the progress bar color
