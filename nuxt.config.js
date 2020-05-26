@@ -35,6 +35,10 @@ module.exports = {
     breaks: true,
     injected: true
   },
+  plugins: [
+    '~plugins/global',
+    '~plugins/file'
+  ],
   /*
   ** Customize the progress bar color
   */

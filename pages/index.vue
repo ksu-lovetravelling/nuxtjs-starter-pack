@@ -16,18 +16,16 @@
       {{ homePage }}
 
       <div v-html="$md.render(markdownText)" />
+
+      <img :src="$file.getFileUrl(homePage.background.url)">
     </div>
   </section>
 </template>
 
 <script>
-import AppButton from '~/components/global/AppButton';
 import homepageQuery from "@/apollo/queries/home-page/homepage.gql";
 
 export default {
-  components: {
-    AppButton,
-  },
   data() {
     return {
       homePage: {
