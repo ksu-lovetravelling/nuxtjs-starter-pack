@@ -22,6 +22,9 @@ module.exports = {
     '@nuxtjs/apollo',
     '@nuxtjs/markdownit'
   ],
+  css: [
+    '@/assets/scss/style.scss'
+  ],
   apollo: {
     clientConfigs: {
       default: {
