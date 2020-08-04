@@ -42,3 +42,15 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+  .container {
+
+
+    @media screen and (max-width:640px) {
+      h2 {
+
+      }
+    }
+  }
+</style>
